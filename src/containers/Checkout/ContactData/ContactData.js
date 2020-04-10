@@ -6,7 +6,7 @@ import Spinner from '../../../components/UI/Spinner/Spinner';
 import Button from '../../../components/UI/Button/Button';
 import axios from '../../../axios-orders';
 import Input from '../../../components/UI/Input/Input';
-import withErrorHandler from '../../.../hoc/withErrorHandler/withErrorHandler';
+import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import * as actions from '../../../store/actions/index';
 
 class ContactData extends Component {
@@ -181,9 +181,9 @@ class ContactData extends Component {
 
 const mapStateToProps = state => {
     return {
-        ings: state.ingredients,
-        totalPrice: state.totalPrice,
-        loading: state.loading
+        ings: state.burgerBuilder.ingredients,
+        totalPrice: state.burgerBuilder.totalPrice,
+        loading: state.orders.loading
     };
 };
 
